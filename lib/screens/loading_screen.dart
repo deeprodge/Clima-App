@@ -29,7 +29,7 @@ void getData() async {
     double temp=jsonDecode(data)['main']['temp'];
     int condition=jsonDecode(data)['weather'][0]['id'];
     String cityName=jsonDecode(data)['name'];
-    String weatherCondition=jsonDecode(data)['weather'][0]['description'];
+    //String weatherCondition=jsonDecode(data)['weather'][0]['description'];
 
     print(temp);
   }
