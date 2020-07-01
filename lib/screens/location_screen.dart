@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:clima/services/weather.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class LocationScreen extends StatefulWidget {
   LocationScreen(this.LocationData);
-    final LocationData;
+  final LocationData;
   @override
   _LocationScreenState createState() => _LocationScreenState();
 }
@@ -17,18 +18,27 @@ class _LocationScreenState extends State<LocationScreen> {
   String cityName;
   String weatherCondition;
   String weatherIcon;
-  WeatherModel weatherModel=WeatherModel();
+  WeatherModel weatherModel = WeatherModel();
   String weatherMessage;
 
   void updateUI(dynamic weatherData) {
+    if(weatherData==null){
+      Alert(context: context, title: "Error!", desc: "Location Permission not provided!").show();
+      temperature=0;
+      weatherIcon='';
+      weatherMessage='';
+      cityName='';
+      return;
+    }
     temp = weatherData['main']['temp'];
-    temperature=temp.toInt();
+    temperature = temp.toInt();
     condition = weatherData['weather'][0]['id'];
     cityName = weatherData['name'];
     weatherCondition = weatherData['weather'][0]['description'];
-    weatherIcon=weatherModel.getWeatherIcon(condition);
-    weatherMessage=weatherModel.getMessage(temperature);
+    weatherIcon = weatherModel.getWeatherIcon(condition);
+    weatherMessage = weatherModel.getMessage(temperature);
   }
+
   @override
   void initState() {
     super.initState();
@@ -57,7 +67,11 @@ class _LocationScreenState extends State<LocationScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   FlatButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      var weatherData= await weatherModel.getWeatherLocation();
+                      updateUI(weatherData);
+                      Alert(context: context, title: "Updated!", desc: "Location Permission not provided!").show();
+                    },
                     child: Icon(
                       Icons.near_me,
                       size: 50.0,
@@ -102,5 +116,3 @@ class _LocationScreenState extends State<LocationScreen> {
     );
   }
 }
-
-
