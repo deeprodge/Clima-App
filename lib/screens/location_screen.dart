@@ -3,6 +3,7 @@ import 'package:clima/utilities/constants.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:clima/services/weather.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'city_screen.dart';
 
 class LocationScreen extends StatefulWidget {
   LocationScreen(this.LocationData);
@@ -22,21 +23,25 @@ class _LocationScreenState extends State<LocationScreen> {
   String weatherMessage;
 
   void updateUI(dynamic weatherData) {
-    if(weatherData==null){
-      Alert(context: context, title: "Error!", desc: "Location Permission not provided!").show();
-      temperature=0;
-      weatherIcon='';
-      weatherMessage='';
-      cityName='';
-      return;
-    }
-    temp = weatherData['main']['temp'];
-    temperature = temp.toInt();
-    condition = weatherData['weather'][0]['id'];
-    cityName = weatherData['name'];
-    weatherCondition = weatherData['weather'][0]['description'];
-    weatherIcon = weatherModel.getWeatherIcon(condition);
-    weatherMessage = weatherModel.getMessage(temperature);
+    setState(() {
+      if (weatherData == null) {
+        Alert(context: context,
+            title: "Error!",
+            desc: "Location Permission not provided!").show();
+        temperature = 0;
+        weatherIcon = '';
+        weatherMessage = '';
+        cityName = '';
+        return;
+      }
+      temp = weatherData['main']['temp'];
+      temperature = temp.toInt();
+      condition = weatherData['weather'][0]['id'];
+      cityName = weatherData['name'];
+      weatherCondition = weatherData['weather'][0]['description'];
+      weatherIcon = weatherModel.getWeatherIcon(condition);
+      weatherMessage = weatherModel.getMessage(temperature);
+    });
   }
 
   @override
@@ -78,7 +83,11 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   ),
                   FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return CityScreen();
+                      }));
+                    },
                     child: Icon(
                       Icons.location_city,
                       size: 50.0,
