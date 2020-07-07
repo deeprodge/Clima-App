@@ -20,3 +20,6 @@ const kConditionTextStyle = TextStyle(
 );
 
 const kCardColour=Colors.white;
+
+const kTempTextIcon=Color(0xffDBD5E9);
+

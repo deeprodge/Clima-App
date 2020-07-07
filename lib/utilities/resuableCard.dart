@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'constants.dart';
 
 
@@ -15,15 +16,23 @@ class ReusableCard extends StatelessWidget {
         onTap: onPress,
 
       child: Container(
+        padding: EdgeInsets.all(10),
         child: cardChild,
         margin: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: colour,
+//          gradient: LinearGradient(
+//            colors: [
+//              colour,
+//              colour.withOpacity(0.7),
+//    ],
+//
+//          ),
+          color: Color(0xff161020),
           borderRadius: BorderRadius.circular(10),
 
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
+            color: Colors.black.withOpacity(0.5),
             spreadRadius: 5,
             blurRadius: 7,
             offset: Offset(0, 3), // changes position of shadow

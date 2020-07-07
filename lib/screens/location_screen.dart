@@ -6,6 +6,7 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 import 'city_screen.dart';
 import 'package:clima/utilities/resuableCard.dart';
 import 'package:weather_icons/weather_icons.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class LocationScreen extends StatefulWidget {
   LocationScreen(this.LocationData);
@@ -23,8 +24,15 @@ class _LocationScreenState extends State<LocationScreen> {
   IconData weatherIcon;
   WeatherModel weatherModel = WeatherModel();
   String weatherMessage;
-  double feelsliketemp=0;
-  int feelslike=0;
+  double feelsliketemp = 0;
+  int feelslike = 0;
+  int minTemp=0;
+  double minTempDou=0;
+  double maxTempDou=0.0;
+  int maxTemp=0;
+  int humidity=0;
+  int windSpeed=0;
+
 
   void updateUI(dynamic weatherData) {
     setState(() {
@@ -47,8 +55,14 @@ class _LocationScreenState extends State<LocationScreen> {
       weatherCondition = weatherData['weather'][0]['description'];
       weatherIcon = weatherModel.getWeatherIcon(condition);
       weatherMessage = weatherModel.getMessage(temperature);
-      feelsliketemp=weatherData['main']['feels_like'];
-      feelslike=feelsliketemp.toInt();
+      feelsliketemp = weatherData['main']['feels_like']+0.0;
+      feelslike = feelsliketemp.toInt();
+      minTempDou= weatherData['main']['temp_min']+0.0;
+      minTemp=minTempDou.toInt();
+      maxTempDou= weatherData['main']['temp_max']+0.0;
+      maxTemp=maxTempDou.toInt();
+      humidity=weatherData['main']['humidity'];
+      windSpeed=weatherData['wind']['speed'];
     });
   }
 
@@ -61,20 +75,21 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff0C0017),
         body: Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('images/location_background.jpg'),
-                fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(
-                    Colors.white.withOpacity(0.8), BlendMode.dstATop),
-              ),
+//              image: DecorationImage(
+//                image: AssetImage('images/location_background.jpg'),
+//                fit: BoxFit.cover,
+//                colorFilter: ColorFilter.mode(
+//                    Colors.white.withOpacity(0.8), BlendMode.dstATop),
+//              ),
             ),
             constraints: BoxConstraints.expand(),
             child: SafeArea(
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    //crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -92,17 +107,19 @@ class _LocationScreenState extends State<LocationScreen> {
                                   desc: "Location Permission not provided!")
                               .show();
                         },
-
                         child: Icon(
                           Icons.near_me,
                           size: 50.0,
+                            color: kCardColour
                         ),
                       ),
                       Text(
                         '$cityName',
                         style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Oswald",
+                          color: kTempTextIcon
                         ),
                       ),
                       FlatButton(
@@ -120,6 +137,7 @@ class _LocationScreenState extends State<LocationScreen> {
                         child: Icon(
                           Icons.location_city,
                           size: 50.0,
+                            color: kCardColour
                         ),
                       ),
                     ],
@@ -147,74 +165,205 @@ class _LocationScreenState extends State<LocationScreen> {
                   style: kMessageTextStyle,
                 ),
               ),*/
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 1,
+                    width: 50,
+                    color: kTempTextIcon,
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Expanded(
                     child: Column(
                       children: <Widget>[
+                        SizedBox(
+                          height: 300,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: <Widget>[
+                              Icon(
+                                weatherIcon,
+                                color: kTempTextIcon,
+                                size: 90,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                textBaseline: TextBaseline.alphabetic,
+                                crossAxisAlignment: CrossAxisAlignment.baseline,
+                                children: <Widget>[
+                                  Text(
+                                    '$temperature°',
+                                    style: TextStyle(
+                                      fontSize: 80,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: "Oswald",
+                                      color: kTempTextIcon
+                                    ),
+                                  ),
+                                  Text(
+                                    'C',
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: "Oswald",
+                                      color: Color(0xFFd60000),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Text(
+                                'Feels like $feelslike°c',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: "Oswald",
+                                  color: kTempTextIcon.withOpacity(0.4),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 97,
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: ReusableCard(
+                                  cardChild: MinMax('Minimum',minTemp),
+                                ),
+                              ),
 
-                          SizedBox(
-                            height: 300,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              Expanded(
+                                child: ReusableCard(
+                                  cardChild: MinMax('Maximum', maxTemp),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: ReusableCard(
+                            cardChild: Row(
                               children: <Widget>[
-                                Icon(
-                                      weatherIcon,
-                                      color: Colors.white,
-                                      size:90,
-                                    ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  textBaseline: TextBaseline.alphabetic,
-                                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                                Column(
                                   children: <Widget>[
-                                    Text(
-                                      '$temperature°',
-                                      style: TextStyle(
-                                          fontSize: 80,
-                                          fontWeight: FontWeight.bold
-                                      ),
+                                    MisDetails(
+                                        humidity,
+                                        WeatherIcons.humidity,
+                                        '%',
                                     ),
-                                    Text('C',
-                                      style: TextStyle(
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold
-                                      ),),
+                                    MisDetails(
+                                      windSpeed,
+                                      WeatherIcons.strong_wind,
+                                      'M/s'
+                                    )
                                   ],
-                                ),
-                                    Text(
-                                      'Feels like $feelslike°c',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w500
-                                      ),
-                                    ),
-
-
+                                )
                               ],
                             ),
+                          ),
+                        ),
 
-                          ),
-                        Expanded(
-                          child: ReusableCard(
-                            colour: Colors.white,
-                            
-                          ),
-                        ),
-                        Expanded(
-                          child: ReusableCard(
-                            colour: Colors.white,
-                          ),
-                        ),
-                        Expanded(
-                          child: ReusableCard(
-                            colour: Colors.white,
-                          ),
-                        ),
                       ],
                     ),
                   ),
                 ]))));
+  }
+}
+
+class MisDetails extends StatelessWidget {
+  MisDetails(
+      this.humidity,
+      this.icon,
+      this.unit
+  );
+
+  final int humidity;
+  final IconData icon;
+  final String unit;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      textBaseline: TextBaseline.alphabetic,
+      crossAxisAlignment: CrossAxisAlignment.baseline,
+      children: <Widget>[
+        Icon(icon),
+        SizedBox(
+          width: 15,
+        ),
+        Text(
+          '$humidity',
+          style: TextStyle(
+            fontFamily: 'Oswald',
+            fontSize: 30,
+          ),
+        ),
+        Text('$unit',
+          style: TextStyle(
+            fontFamily: "Oswald",
+            color:Color(0xFFd60000) ,
+            fontSize: 20,
+            fontWeight: FontWeight.w400,
+          ),)
+      ],
+    );
+  }
+}
+
+class MinMax extends StatelessWidget {
+  MinMax(this.cond,this.temp);
+  String cond;
+  int temp;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      //crossAxisAlignment: cent,
+      children: <Widget>[
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          textBaseline: TextBaseline.alphabetic,
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          children: <Widget>[
+            Text(
+              '$cond: ',
+              style: TextStyle(
+                fontFamily: "Oswald",
+
+                fontSize: 20,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+            Text('$temp°',
+              style: TextStyle(
+                fontFamily: "Oswald",
+
+                fontSize: 30,
+                fontWeight: FontWeight.w400,
+              ),),
+            Text('c',
+              style: TextStyle(
+                fontFamily: "Oswald",
+                color:Color(0xFFd60000) ,
+                fontSize: 25,
+                fontWeight: FontWeight.w400,
+              ),)
+          ],
+        ),
+      ],
+    );
   }
 }

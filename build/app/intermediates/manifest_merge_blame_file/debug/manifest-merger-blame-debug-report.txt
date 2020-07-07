@@ -36,8 +36,8 @@
 27        android:debuggable="true"
 28        android:icon="@mipmap/ic_launcher"
 28-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:12:9-43
-29        android:label="clima" >
-29-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:11:9-30
+29        android:label="" >
+29-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:11:9-25
 30        <activity
 30-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:13:9-31:20
 31            android:name="co.appbrewery.clima.MainActivity"
@@ -87,11 +87,11 @@
 57-->[com.google.android.gms:play-services-base:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/013353318ce014f941fb8cace7c53ba0/play-services-base-17.2.1/AndroidManifest.xml:26:13-72
 58
 59        <meta-data
-59-->[com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:23:9-25:69
+59-->[com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:23:9-25:69
 60            android:name="com.google.android.gms.version"
-60-->[com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:24:13-58
+60-->[com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:24:13-58
 61            android:value="@integer/google_play_services_version" />
-61-->[com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:25:13-66
+61-->[com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:25:13-66
 62    </application>
 63
 64</manifest>

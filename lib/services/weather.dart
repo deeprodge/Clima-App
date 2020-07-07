@@ -48,6 +48,7 @@ class WeatherModel {
     }
   }
 
+
   String getMessage(int temp) {
     if (temp > 25) {
       return 'It\'s 🍦 time';

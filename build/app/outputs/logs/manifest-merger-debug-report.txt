@@ -9,11 +9,11 @@ MERGED from [:geolocator] /home/jayrodge/Documents/Flutter Projects/Clima App/bu
 MERGED from [:location_permissions] /home/jayrodge/Documents/Flutter Projects/Clima App/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:google_api_availability] /home/jayrodge/Documents/Flutter Projects/Clima App/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat:1.0.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/e98bbbdf6a23e70c7d5ba31e435328ac/appcompat-1.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/ea3114725ece85ad71a59cd685c73d16/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/e3745f102097d42eed1723e8765ba902/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/013353318ce014f941fb8cace7c53ba0/play-services-base-17.2.1/AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/73ac6198cc3563b487cc2f09e8ec64c8/play-services-places-placereport-16.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.2] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/8475812d079d70b4eb6d4d6efd538d89/play-services-tasks-17.0.2/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/cb28eb37786c46aa315fbb0bc9e79ad7/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/f1af6724f4620915405752d62143122a/activity-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/fc69b0f2a763c751281a0d5d3c86e038/vectordrawable-animated-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -67,16 +67,16 @@ MERGED from [:geolocator] /home/jayrodge/Documents/Flutter Projects/Clima App/bu
 		ADDED from /home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:3:22-78
 application
 ADDED from /home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:9:5-32:19
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/ea3114725ece85ad71a59cd685c73d16/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/ea3114725ece85ad71a59cd685c73d16/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/e3745f102097d42eed1723e8765ba902/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/e3745f102097d42eed1723e8765ba902/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-base:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/013353318ce014f941fb8cace7c53ba0/play-services-base-17.2.1/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/013353318ce014f941fb8cace7c53ba0/play-services-base-17.2.1/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/73ac6198cc3563b487cc2f09e8ec64c8/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/73ac6198cc3563b487cc2f09e8ec64c8/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.2] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/8475812d079d70b4eb6d4d6efd538d89/play-services-tasks-17.0.2/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.2] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/8475812d079d70b4eb6d4d6efd538d89/play-services-tasks-17.0.2/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.2.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/19e07ef27262353bfade2175b3cb485a/core-1.2.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.2.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/19e07ef27262353bfade2175b3cb485a/core-1.2.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/b1e5b3e7ff90977513d02b308ca82682/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
@@ -84,7 +84,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/jayro
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/19e07ef27262353bfade2175b3cb485a/core-1.2.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:11:9-30
+		ADDED from /home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:11:9-25
 	android:icon
 		ADDED from /home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:12:9-43
 	android:name
@@ -131,16 +131,16 @@ MERGED from [:google_api_availability] /home/jayrodge/Documents/Flutter Projects
 MERGED from [:google_api_availability] /home/jayrodge/Documents/Flutter Projects/Clima App/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.0.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/e98bbbdf6a23e70c7d5ba31e435328ac/appcompat-1.0.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.0.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/e98bbbdf6a23e70c7d5ba31e435328ac/appcompat-1.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/ea3114725ece85ad71a59cd685c73d16/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/ea3114725ece85ad71a59cd685c73d16/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/e3745f102097d42eed1723e8765ba902/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/e3745f102097d42eed1723e8765ba902/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-base:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/013353318ce014f941fb8cace7c53ba0/play-services-base-17.2.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/013353318ce014f941fb8cace7c53ba0/play-services-base-17.2.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/73ac6198cc3563b487cc2f09e8ec64c8/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/73ac6198cc3563b487cc2f09e8ec64c8/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.2] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/8475812d079d70b4eb6d4d6efd538d89/play-services-tasks-17.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.2] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/8475812d079d70b4eb6d4d6efd538d89/play-services-tasks-17.0.2/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/cb28eb37786c46aa315fbb0bc9e79ad7/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/cb28eb37786c46aa315fbb0bc9e79ad7/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/f1af6724f4620915405752d62143122a/activity-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -222,8 +222,8 @@ ADDED from [com.google.android.gms:play-services-base:17.2.1] /home/jayrodge/.gr
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/013353318ce014f941fb8cace7c53ba0/play-services-base-17.2.1/AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/08439174d9c713ddbbcc7bd5ab067a18/jetified-play-services-basement-17.2.1/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:17.2.1] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/5d34449e1503ba9cb1bff6e1981ac081/jetified-play-services-basement-17.2.1/AndroidManifest.xml:24:13-58
