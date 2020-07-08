@@ -11,13 +11,14 @@ class _CityScreenState extends State<CityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff0C0017),
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('images/city_background.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
+//        decoration: BoxDecoration(
+//          image: DecorationImage(
+//            image: AssetImage('images/city_background.jpg'),
+//            fit: BoxFit.cover,
+//          ),
+//        ),
         constraints: BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
@@ -43,11 +44,12 @@ class _CityScreenState extends State<CityScreen> {
                   ),
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.white,
+                    fillColor: Color(0xff161020),
                     hintText: 'Enter City Name',
                     hintStyle: TextStyle(
                       color: Colors.grey,
-                      fontSize: 20
+                      fontSize: 20,
+                      fontFamily: "Oswald"
                     ),
                     icon: Icon(
                       Icons.location_city,

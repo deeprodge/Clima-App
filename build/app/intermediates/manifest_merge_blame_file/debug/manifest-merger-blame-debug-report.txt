@@ -12,69 +12,69 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/debug/AndroidManifest.xml:6:5-66
-14-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/debug/AndroidManifest.xml:6:22-64
+14-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:4:3-64
+14-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:4:20-62
 15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-15-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:3:5-81
-15-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:3:22-78
+15-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:3:3-79
+15-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:3:20-76
 16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 16-->[:geolocator] /home/jayrodge/Documents/Flutter Projects/Clima App/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
 16-->[:geolocator] /home/jayrodge/Documents/Flutter Projects/Clima App/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-76
 17    <!--
 18 io.flutter.app.FlutterApplication is an android.app.Application that
-19         calls FlutterMain.startInitialization(this); in its onCreate method.
-20         In most cases you can leave this as-is, but you if you want to provide
-21         additional functionality it is fine to subclass or reimplement
-22         FlutterApplication and put your custom class here.
+19       calls FlutterMain.startInitialization(this); in its onCreate method.
+20       In most cases you can leave this as-is, but you if you want to provide
+21       additional functionality it is fine to subclass or reimplement
+22       FlutterApplication and put your custom class here.
 23    -->
 24    <application
-24-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:9:5-32:19
+24-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:10:3-33:17
 25        android:name="io.flutter.app.FlutterApplication"
-25-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:10:9-57
+25-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:11:7-55
 26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 26-->[androidx.core:core:1.2.0] /home/jayrodge/.gradle/caches/transforms-2/files-2.1/19e07ef27262353bfade2175b3cb485a/core-1.2.0/AndroidManifest.xml:24:18-86
 27        android:debuggable="true"
 28        android:icon="@mipmap/ic_launcher"
-28-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:12:9-43
-29        android:label="" >
-29-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:11:9-25
+28-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:13:7-41
+29        android:label="Climation" >
+29-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:12:7-32
 30        <activity
-30-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:13:9-31:20
+30-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:14:5-32:16
 31            android:name="co.appbrewery.clima.MainActivity"
-31-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:14:13-41
+31-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:15:9-37
 32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-32-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:17:13-144
+32-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:18:9-140
 33            android:hardwareAccelerated="true"
-33-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:18:13-47
+33-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:19:9-43
 34            android:launchMode="singleTop"
-34-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:15:13-43
+34-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:16:9-39
 35            android:theme="@style/LaunchTheme"
-35-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:16:13-47
+35-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:17:9-43
 36            android:windowSoftInputMode="adjustResize" >
-36-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:19:13-55
+36-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:20:9-51
 37
 38            <!--
-39                 This keeps the window background of the activity showing
-40                 until Flutter renders its first frame. It can be removed if
-41                 there is no splash screen (such as the default splash screen
-42                 defined in @style/LaunchTheme).
+39           This keeps the window background of the activity showing
+40           until Flutter renders its first frame. It can be removed if
+41           there is no splash screen (such as the default splash screen
+42           defined in @style/LaunchTheme).
 43            -->
 44            <meta-data
-44-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:24:13-26:40
+44-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:25:7-27:34
 45                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
-45-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:25:17-82
+45-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:26:11-76
 46                android:value="true" />
-46-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:26:17-37
+46-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:27:11-31
 47
 48            <intent-filter>
-48-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:27:13-30:29
+48-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:28:7-31:23
 49                <action android:name="android.intent.action.MAIN" />
-49-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:28:17-68
-49-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:28:25-66
+49-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:29:9-60
+49-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:29:17-58
 50
 51                <category android:name="android.intent.category.LAUNCHER" />
-51-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:29:17-76
-51-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:29:27-74
+51-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:30:9-68
+51-->/home/jayrodge/Documents/Flutter Projects/Clima App/android/app/src/main/AndroidManifest.xml:30:19-66
 52            </intent-filter>
 53        </activity>
 54        <activity

@@ -30,8 +30,10 @@ class _LocationScreenState extends State<LocationScreen> {
   double minTempDou=0;
   double maxTempDou=0.0;
   int maxTemp=0;
-  int humidity=0;
-  int windSpeed=0;
+  double humidity=0;
+  double windSpeed=0;
+  double windDir=0;
+  double clouds=0;
 
 
   void updateUI(dynamic weatherData) {
@@ -61,8 +63,10 @@ class _LocationScreenState extends State<LocationScreen> {
       minTemp=minTempDou.toInt();
       maxTempDou= weatherData['main']['temp_max']+0.0;
       maxTemp=maxTempDou.toInt();
-      humidity=weatherData['main']['humidity'];
-      windSpeed=weatherData['wind']['speed'];
+      humidity=weatherData['main']['humidity']+0.0;
+      windSpeed=weatherData['wind']['speed']+0.0;
+      windDir=weatherData['wind']['deg']+0.0;
+      clouds=weatherData['clouds']['all']+0.0;
     });
   }
 
@@ -174,7 +178,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     color: kTempTextIcon,
                   ),
                   SizedBox(
-                    height: 30,
+                    height: 50,
                   ),
                   Expanded(
                     child: Column(
@@ -186,7 +190,7 @@ class _LocationScreenState extends State<LocationScreen> {
                             children: <Widget>[
                               Icon(
                                 weatherIcon,
-                                color: kTempTextIcon,
+                                color: Color(0xFFd60000),
                                 size: 90,
                               ),
                               SizedBox(
@@ -251,11 +255,14 @@ class _LocationScreenState extends State<LocationScreen> {
                           ),
                         ),
                         Expanded(
-                          flex: 4,
+                          flex: 3,
                           child: ReusableCard(
                             cardChild: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: <Widget>[
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: <Widget>[
                                     MisDetails(
                                         humidity,
@@ -263,12 +270,31 @@ class _LocationScreenState extends State<LocationScreen> {
                                         '%',
                                     ),
                                     MisDetails(
-                                      windSpeed,
-                                      WeatherIcons.strong_wind,
-                                      'M/s'
+                                      clouds,
+                                      WeatherIcons.cloud,
+                                      '%'
                                     )
                                   ],
-                                )
+                                ),
+
+
+                                Column(
+
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    MisDetails(
+                                        windSpeed,
+                                        WeatherIcons.strong_wind,
+                                        'M/s'
+                                    ),
+                                    MisDetails(
+                                      windDir,
+                                      WeatherIcons.wind_direction,
+                                      'Deg',
+                                    )
+                                  ],
+                                ),
                               ],
                             ),
                           ),
@@ -283,12 +309,12 @@ class _LocationScreenState extends State<LocationScreen> {
 
 class MisDetails extends StatelessWidget {
   MisDetails(
-      this.humidity,
+      this.measures,
       this.icon,
       this.unit
   );
 
-  final int humidity;
+  final double measures;
   final IconData icon;
   final String unit;
 
@@ -304,10 +330,10 @@ class MisDetails extends StatelessWidget {
           width: 15,
         ),
         Text(
-          '$humidity',
+          '$measures ',
           style: TextStyle(
             fontFamily: 'Oswald',
-            fontSize: 30,
+            fontSize: 25,
           ),
         ),
         Text('$unit',
@@ -351,7 +377,7 @@ class MinMax extends StatelessWidget {
               style: TextStyle(
                 fontFamily: "Oswald",
 
-                fontSize: 30,
+                fontSize: 27,
                 fontWeight: FontWeight.w400,
               ),),
             Text('c',
