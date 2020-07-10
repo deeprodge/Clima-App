@@ -11,7 +11,6 @@ class WeatherModel {
   Future<dynamic> getCityWeather(String cityName) async {
     Location location = Location();
     await location.getCurrentLocation();
-
     NetworkHelper networkhelper = NetworkHelper(
         'https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=$apiKey&units=metric');
     var weatherData = await networkhelper.getData();
@@ -20,11 +19,13 @@ class WeatherModel {
 
   Future<dynamic> getWeatherLocation() async {
     Location location = Location();
+    print('Step 1 done');
     await location.getCurrentLocation();
-
+    print('getWeatherLocation got locaton!');
     NetworkHelper networkhelper = NetworkHelper(
         'https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=$apiKey&units=metric');
     var weatherData = await networkhelper.getData();
+    print('Got API Data!');
     return weatherData;
   }
 

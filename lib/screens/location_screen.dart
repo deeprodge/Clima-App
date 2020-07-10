@@ -44,7 +44,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 title: "Error!",
                 desc: "Location Permission not provided!")
             .show();
-        temperature = 0;
+        temperature = 0;print('getWeatherLocation got locaton!');
         weatherIcon = WeatherIcons.alien;
         weatherMessage = '';
         cityName = '';

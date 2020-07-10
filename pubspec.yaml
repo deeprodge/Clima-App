@@ -4,7 +4,7 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -15,8 +15,9 @@ dependencies:
   rflutter_alert: ^1.0.3
   weather_icons: ^2.0.1
   carousel_slider: ^2.2.1
-
+  geolocation: ^1.1.2
   cupertino_icons: ^0.1.2
+  clay_containers: ^0.2.2
 
 dev_dependencies:
   flutter_test:
@@ -26,17 +27,15 @@ flutter:
   uses-material-design: true
 
   assets:
-  - images/
+    - images/
 
   fonts:
-  - family: Spartan MB
-    fonts:
-    - asset: fonts/SpartanMB-Black.otf
-      weight: 900
-  - family: Oswald
-    fonts:
-    - asset: fonts/Oswald-Regular.ttf
-    - asset: fonts/Oswald-Light.ttf
-    - asset: fonts/Oswald-ExtraLight.ttf
-
-
+    - family: Spartan MB
+      fonts:
+        - asset: fonts/SpartanMB-Black.otf
+          weight: 900
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald-Regular.ttf
+        - asset: fonts/Oswald-Light.ttf
+        - asset: fonts/Oswald-ExtraLight.ttf
