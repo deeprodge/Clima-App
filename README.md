@@ -4,7 +4,7 @@
 It is a simple Weather app made using flutter to find out the live weather of your current location as well as any city you can think of. Apart from temperature it tell you various things like Humidity, Wind speed, Direction, Cloudiness etc. To obtain the information about weather I used OpenWeather API.
 The Design 
 
-<img src="https://i.imgur.com/xygzHKZ.png" width="250"> <img src="https://i.imgur.com/9WNZSsh.png" width="250"> 
+<img src="https://i.imgur.com/xygzHKZ.png" width="250">    <img src="https://i.imgur.com/9WNZSsh.png" width="250">    <img src="https://i.imgur.com/L3ZIWTG.png" width="250"> 
 
 ## What I learned
 
