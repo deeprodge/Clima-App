@@ -34,21 +34,23 @@ class _LocationScreenState extends State<LocationScreen> {
   double windSpeed=0;
   double windDir=0;
   double clouds=0;
+  int start=0;
 
 
   void updateUI(dynamic weatherData) {
     setState(() {
       if (weatherData == null) {
-        Alert(
-                context: context,
-                title: "Error!",
-                desc: "Location Permission not provided!")
+        alertDialog("Error!","Location Permissions not provided.")
             .show();
-        temperature = 0;print('getWeatherLocation got locaton!');
+        temperature = 0;print("getWeatherLocation didn't get locaton!");
         weatherIcon = WeatherIcons.alien;
         weatherMessage = '';
         cityName = '';
         return;
+      }
+      else{
+        alertDialog("Updated!","Location updated successfully.")
+            .show();
       }
       temp = weatherData['main']['temp'];
       temperature = temp.toInt();
@@ -70,6 +72,44 @@ class _LocationScreenState extends State<LocationScreen> {
     });
   }
 
+  Alert alertDialog(String title, String desc) {
+    return Alert(
+          buttons: [
+            DialogButton(
+              color: Color(0xFFd60000),
+              child: Text(
+                "Okay",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              onPressed: () => Navigator.pop(context),
+              width: 250,
+            )
+          ],
+          context: context,
+          style: AlertStyle(
+            alertElevation: 40,
+            alertBorder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+
+            ),
+            backgroundColor: Color(0xff0C0017),
+            //overlayColor: Colors.deepOrangeAccent,
+            titleStyle: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Oswald",
+                color: kTempTextIcon
+            ),
+            descStyle: TextStyle(
+                fontSize: 20,
+                //fontFamily: "Oswald",
+                color: kTempTextIcon
+            ),
+          ),
+          title: title,
+          desc: desc);
+  }
+
   @override
   void initState() {
     super.initState();
@@ -78,6 +118,9 @@ class _LocationScreenState extends State<LocationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery. of(context). size. width;
+    double height = MediaQuery. of(context). size. height;
+    print("DEEEP $height");
     return Scaffold(
       backgroundColor: Color(0xff0C0017),
         body: Container(
@@ -105,25 +148,24 @@ class _LocationScreenState extends State<LocationScreen> {
                           var weatherData =
                               await weatherModel.getWeatherLocation();
                           updateUI(weatherData);
-                          Alert(
-                                  context: context,
-                                  title: "Updated!",
-                                  desc: "Location Permission not provided!")
-                              .show();
+
                         },
                         child: Icon(
                           Icons.near_me,
-                          size: 50.0,
+                          size: height*0.073,
                             color: kCardColour
                         ),
                       ),
-                      Text(
-                        '$cityName',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Oswald",
-                          color: kTempTextIcon
+                      Flexible(
+                        child: Text(
+                          '$cityName',
+                            overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: height*0.044,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Oswald",
+                            color: kTempTextIcon
+                          ),
                         ),
                       ),
                       FlatButton(
@@ -140,35 +182,12 @@ class _LocationScreenState extends State<LocationScreen> {
                         },
                         child: Icon(
                           Icons.location_city,
-                          size: 50.0,
+                          size: height*0.073,
                             color: kCardColour
                         ),
                       ),
                     ],
                   ),
-                  /*Padding(
-                padding: EdgeInsets.only(left: 15.0),
-                child: Row(
-                  children: <Widget>[
-                    Text(
-                      '$temperature',
-                      style: kTempTextStyle,
-                    ),
-                    Text(
-                      '$weatherIcon',
-                      style: kConditionTextStyle,
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: 15.0),
-                child: Text(
-                  "$weatherMessage in $cityName!",
-                  textAlign: TextAlign.right,
-                  style: kMessageTextStyle,
-                ),
-              ),*/
                   SizedBox(
                     height: 10,
                   ),
@@ -177,25 +196,28 @@ class _LocationScreenState extends State<LocationScreen> {
                     width: 50,
                     color: kTempTextIcon,
                   ),
-                  SizedBox(
+                  /*SizedBox(
                     height: 50,
-                  ),
+                  ),*/
                   Expanded(
                     child: Column(
                       children: <Widget>[
                         SizedBox(
-                          height: 300,
+                          height: height*0.4,
                           child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
+                              SizedBox(
+                                height: height*0.01,
+                              ),
                               Icon(
                                 weatherIcon,
                                 color: Color(0xFFd60000),
-                                size: 90,
+                                size: height*0.12,
                               ),
-                              SizedBox(
-                                height: 10,
-                              ),
+                              /*SizedBox(
+                                height: height*0.010,
+                              ),*/
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 textBaseline: TextBaseline.alphabetic,
@@ -204,7 +226,7 @@ class _LocationScreenState extends State<LocationScreen> {
                                   Text(
                                     '$temperature°',
                                     style: TextStyle(
-                                      fontSize: 80,
+                                      fontSize: height*0.100,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: "Oswald",
                                       color: kTempTextIcon
@@ -213,7 +235,7 @@ class _LocationScreenState extends State<LocationScreen> {
                                   Text(
                                     'C',
                                     style: TextStyle(
-                                      fontSize: 30,
+                                      fontSize: height*0.04,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: "Oswald",
                                       color: Color(0xFFd60000),
@@ -224,7 +246,7 @@ class _LocationScreenState extends State<LocationScreen> {
                               Text(
                                 'Feels like $feelslike°c',
                                 style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: height*0.0292,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: "Oswald",
                                   color: kTempTextIcon.withOpacity(0.4),
@@ -233,9 +255,7 @@ class _LocationScreenState extends State<LocationScreen> {
                             ],
                           ),
                         ),
-                        SizedBox(
-                          height: 97,
-                        ),
+                        SizedBox(height: height*0.117,),
                         Expanded(
                           flex: 2,
                           child: Row(
