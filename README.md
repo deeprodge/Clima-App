@@ -3,7 +3,7 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1280px-Google_Play_Store_badge_EN.svg.png" width="250"> 
 
-## What is does?
+## What it does?
 It is a simple Weather app made using flutter to find out the live weather of your current location as well as any city you can think of. Apart from temperature it tell you various things like Humidity, Wind speed, Direction, Cloudiness etc. To obtain the information about weather I used OpenWeather API.
 The Design 
 
